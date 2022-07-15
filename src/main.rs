@@ -2,7 +2,7 @@ use rand::seq::SliceRandom;
 use rand::thread_rng;
 
 fn main() {
-    let mut nums: Vec<u32> = (1..5000).collect();
+    let mut nums: Vec<u32> = (1..10).collect();
 
     let tries = 500;
 
@@ -45,7 +45,7 @@ fn trial(i: &u32, var: &Vec<u32>) -> bool {
     let cc = *i;
     let mut i = *i;
     i -= 1;
-    for _a in 1..2501 {
+    for _a in 1..5 {
         i = var[i as usize];
         if i == cc {
             return true;
